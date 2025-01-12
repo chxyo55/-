@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>งานสวนพฤกษศาสตร์โรงเรียน</title>
     <link href="https://fonts.googleapis.com/css2?family=Thasadith:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
     <style>
         /* Reset CSS */
         * {
@@ -13,7 +12,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
         body {
             font-family: 'Thasadith', sans-serif;
@@ -35,35 +38,61 @@
         }
 
         nav {
-            background: #333;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-        }
+    width: 100%;
+    background-color: #333;
+    color: white;
+    position: relative;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-        nav ul li {
-            text-align: center;
-        }
+nav ul li {
+    display: inline-block;
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 5px 10px;
-            transition: background 0.3s;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
 
         nav ul li a:hover {
             background: #4CAF50;
             border-radius: 5px;
+            color: #ff9800;
         }
+
+/* Sticky Effect */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
 
         .marquee {
             background: #333;
@@ -165,15 +194,20 @@
         <img src="img/ปกเว็บ.png" alt="ปกเว็บ">
     </header>
 
-    <nav>
+    
+    <!-- Navigation Bar -->
+    <nav id="navbar">
         <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href ="index.html">หน้าแรก</a></li>
             <li><a href="khomp.html">ความเป็นมา</a></li>
             <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
             <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
             <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
         </ul>
     </nav>
+
+
+    <script src="script.js"></script>
 
     <div class="marquee">
         <p>ยินดีต้อนรับเข้าสู่งานสวนพฤกษศาสตร์โรงเรียนวิทยาลัยเทคนิคชุมแพ</p>
@@ -240,6 +274,18 @@
   setInterval(() => {
       changeSlide(1);
   }, 5000);
+  // ดึง Navigation Bar
+const navbar = document.getElementById('navbar');
+
+// ฟังก์ชันตรวจสอบตำแหน่งการเลื่อน
+window.onscroll = () => {
+    if (window.scrollY > 50) { // หากเลื่อนเกิน 50px
+        navbar.classList.add('sticky'); // เพิ่มคลาส sticky
+    } else {
+        navbar.classList.remove('sticky'); // เอาคลาส sticky ออก
+    }
+};
 </script>
+
 
 </html>

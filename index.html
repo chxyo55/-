@@ -10,22 +10,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-    
-        <div class="logo">  
-       <center> <img src="img/ปกเว็บ.png" alt="" style="position: relative;top: 90px;"></center>
-    </div>
-       <nav>
-    <ul class="menu">
+    <header>
+        <img src="img/ปกเว็บ.png" alt="ปกเว็บ">
+    </header>
+
+   <!-- Navigation Bar -->
+   <nav id="navbar">
+     <ul>
         <li><a href ="index.html">หน้าแรก</a></li>
         <li><a href="khomp.html">ความเป็นมา</a></li>
         <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
         <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
         <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
-    </ul>
+     </ul>
+    </nav>
 
-   
-</nav>
+    <script src="script.js"></script>
 <div class="marquee">
     <div class="marquee-text">ยินดีต้อนรับเข้าสู่งานสวนพฤกษศาสตร์โรงเรียนวิทยาลัยเทคนิคชุมแพ</div>
 </div>
@@ -81,10 +81,24 @@
     setInterval(() => {
         changeSlide(1);
     }, 5000);
+
+     // ดึง Navigation Bar
+const navbar = document.getElementById('navbar');
+
+// ฟังก์ชันตรวจสอบตำแหน่งการเลื่อน
+window.onscroll = () => {
+    if (window.scrollY > 50) { // หากเลื่อนเกิน 50px
+        navbar.classList.add('sticky'); // เพิ่มคลาส sticky
+    } else {
+        navbar.classList.remove('sticky'); // เอาคลาส sticky ออก
+    }
+};
 </script>
 <!-- สไลด์รูป -->
 <div class="gallery1">
-   <center> <img src="img/แจ่มจันทร์_ผังสรุปงานสวน-1.png" alt=""></center>
+    <center> 
+        <img src="img/แจ่มจันทร์_ผังสรุปงานสวน-1.png" width="50%">
+      </center>
 </div>
 
 <!-- ภาพกิจกรรม -->
@@ -175,11 +189,12 @@
     <a href="https://www.rspg.or.th/botanical_school/neo_sbg/index.html"target="_blank"><img src="img/อพ.สธ.png" alt="รูปภาพ 2">
     </a>
   </div>
+  
  
-  <div class="footer">
+  <footer>
     <p>งานสวนพฤกษศาสตร์โรงเรียน วิทยาลัยเทคนิคชุมแพ</p>
-    <p>271 หมู่ 14  ตำบลหนองไผ่ อำเภอชุมแพ จังหวัดขอนแก่น 40130</p>
-  </div>
+    <p>271 หมู่ 14 ตำบลหนองไผ่ อำเภอชุมแพ จังหวัดขอนแก่น 40130</p>
+</footer>
 </body>
 
 

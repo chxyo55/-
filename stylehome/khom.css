@@ -34,8 +34,8 @@ body {
 
 
 .logo img {
-    width: 1000px;
-    height: 240px;
+    width: 100%;
+    height: auto;
     text-align:center;
 }
 
@@ -81,7 +81,7 @@ body {
     height: 500px;
 }
 
-.slides {
+.slider {
     display: none;
     width: 100%;
     height: 500px;

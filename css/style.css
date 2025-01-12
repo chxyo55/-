@@ -3,102 +3,126 @@
     padding: 0;
     box-sizing: border-box;
 }
-@media screen and (max-width: 768px) {
-    .container {
-      padding: 5px; /* ลด Padding */
-    }
-  
-    h1 {
-      font-size: 1.5em; /* ลดขนาดตัวอักษร */
-    }
-  }
-  
-  @media screen and (max-width: 375px) {
-    .grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ลดขนาด Grid */
-    }
-  
-    button {
-      font-size: 0.8em; /* ลดขนาดปุ่ม */
-    }
-  }
 
-nav {
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid #000000; */
-    padding: 10px;
-    
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.menu {
-    display: flex;
-    list-style: none;
+      body {
+          font-family: 'Thasadith', sans-serif;
+          line-height: 1.6;
+          background: #800080;
+          color: #333;
+      }
+
+      header {
+          background: #4CAF50;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+          
+      }
+
+      header img {
+          max-width: 100%;
+          height: auto;
+          width: 100%;
+      }
+
+      nav {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  position: relative;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-body {
-    background-color: #800080 ;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-
-
-
-img {
-    width:1000px;
-    height: 400px;
-    text-align:center;
-   
+nav ul li {
+  display: inline-block;
 }
 
-.menu li {
-    margin-top: 90px;
-    text-align: right; 
-   margin-left: 2px;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-.menu li a {
-    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-    background: #ff00d4; /* สีพื้นหลัง */
-    border-radius: 7px 7px 0 0; /* มุมโค้ง */
-    display: block;
-    height: 41px;
-    width: 200px;
-    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-    line-height: 41px; /* จัดข้อความให้แนวตั้งตรงกลาง */
-    font-family: 'Thasadith', sans-serif; /* เพิ่มฟอนต์ Thasadith */
-    font-size: 18px; /* ขนาดตัวอักษร */
-    color: white; /* สีตัวอักษร */
-    font-weight: 400; /* น้ำหนักฟอนต์ */
-    transition: background-color 0.3s, color 0.3s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
-}
-.menu li a:hover {
-    background: #e100b2; /* เปลี่ยนสีพื้นหลังเมื่อชี้ */
-    color: #ffe600; /* เปลี่ยนสีตัวอักษรเมื่อชี้ */
+      nav ul li a:hover {
+          background: #4CAF50;
+          border-radius: 5px;
+          color: #ff9800;
+      }
+
+/* Sticky Effect */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-   
+/* Sections */
+.section {
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
 }
+
 /* java */
 .slider {
     position: relative;
     max-width: 1000px;
-    margin: auto;
+    margin: 20px auto;
     overflow: hidden;
     border: 2px solid #ccc;
     border-radius: 10px;
-    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   
 }
+.slider img {
+  width: 100%; /* ปรับภาพให้ตอบสนอง */
+  height: auto;
+}
+.slides.active {
+            display: block;
+        }
+  
+  
+
 
 .slides {
-    display: none;
-    width: 100%;
-    height: 500px;
+  display: none;
+  width: 100%;
 }
+.slides img {
+    width: 100%;
+    height: 100%; /* ให้ภาพเต็มความสูงของสไลเดอร์ */
+    object-fit: cover; /* ให้ภาพครอบคลุมพื้นที่โดยไม่บิดเบี้ยว */
+}
+
+
 
 .active {
     display: block;
@@ -148,7 +172,7 @@ body {
     position: absolute;
     right: 100px;
     top: 1100px;
-    width: 220px;
+    width: 90px;
     height: calc(50% - 1px);
     border-radius: 8px;
    
@@ -159,7 +183,6 @@ body {
     
     
 }
-
 
 
 
@@ -282,35 +305,66 @@ body {
   .navigation a:hover {
     text-decoration: underline;
   }
-  .footer {
-    margin: 20px auto;
-    font-size: 14px;
+  footer {
+    background: #333;
+    color: #fff;
     text-align: center;
-  }
- 
-
-  .marquee {
-    position: relative;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 0;
 }
-
-.marquee-text {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 2rem;
+ /* Marquee */
+  .marquee {
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
     font-weight: bold;
     animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+ /* Marquee */
+
+ /* Responsive Design */
+ @media screen and (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  .slider {
+      height: auto;
+  }
+}
+
+/* การปรับรูปแบบของ container ให้เหมาะสมกับมือถือ */
+/* สำหรับหน้าจอที่มีความกว้างไม่เกิน 768px */
+@media (max-width: 768px) {
+  .container90 {
+    display: flex;
+    flex-direction: column;  /* เปลี่ยนเป็นแนวตั้ง */
+    padding: 10px;
+    gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+  }
+
+  .column {
+    width: 100%;  /* ทำให้คอลัมน์เต็มความกว้าง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างระหว่างคอลัมน์ */
+  }
+}
+
+/* สำหรับหน้าจอที่มีความกว้างมากกว่า 768px */
+@media (min-width: 769px) {
+  .container90 {
+    display: flex;
+    flex-direction: row;  /* เปลี่ยนเป็นแนวนอน */
+    gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+    padding: 20px;
+  }
+
+  .column {
+    width: 32%; /* ทำให้คอลัมน์มีความกว้าง 32% */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างระหว่างคอลัมน์ */
+  }
 }
