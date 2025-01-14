@@ -5,65 +5,99 @@
 
 
 }
-
 @media (max-width: 768px) {
     .column {
         width: 100%;
         margin-bottom: 20px;
     }
 }
+body, html {
+    margin: 0;
+    padding: 0;
+  
+  }
+  body {
+   line-height: 1.6;
+   color: #333;
+   font-family: 'Thasadith', sans-serif;
+   line-height: 1.6;
+   margin: 20px;
+   margin: 0;
+   font-family: 'Krub', sans-serif;
+   color: #fff;
+   background: linear-gradient(135deg, #9b59b6, #8e44ad);
+   padding: 20px;
+   
+  
+  }
 
-nav {
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid #000000; */
-    padding: 10px;
-    
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-}
-
-body {
-    background-color: #800080;
-}
 
 
-
-
-.logo img {
-    width: 100%;
-    height: auto;
-    text-align:center;
-}
-
-.menu li {
-    margin-top: 90px;
-    text-align: right; 
-   margin-left: 2px;
-}
-
-.menu li a {
-    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-    background: #ff00d4; /* สีพื้นหลัง */
-    border-radius: 7px 7px 0 0; /* มุมโค้ง */
-    display: block;
-    height: 41px;
-    width: 200px;
-    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-    line-height: 41px; /* จัดข้อความให้แนวตั้งตรงกลาง */
-    font-family: 'Thasadith', sans-serif; /* เพิ่มฟอนต์ Thasadith */
-    font-size: 18px; /* ขนาดตัวอักษร */
-    color: white; /* สีตัวอักษร */
-    font-weight: 400; /* น้ำหนักฟอนต์ */
-    transition: background-color 0.3s, color 0.3s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
-}
-.menu li a:hover {
-    background: #e100b2; /* เปลี่ยนสีพื้นหลังเมื่อชี้ */
-    color: #ffe600; /* เปลี่ยนสีตัวอักษรเมื่อชี้ */
-}
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+   }
+   header img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+   }
+   
+         nav {
+     width: 100%;
+     background-color: #333;
+     color: white;
+     position: relative;
+     padding: 10px 0;
+     transition: all 0.3s ease;
+     z-index: 1000;
+     font-family: 'Thasadith', sans-serif;
+     
+   }
+   
+   nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+   }
+   
+   nav ul li {
+     display: inline-block;
+   }
+   
+   nav ul li a {
+     color: white;
+     text-decoration: none;
+     padding: 10px 20px;
+     font-size: 18px;
+     transition: color 0.3s;
+   }
+   
+   nav ul li a:hover {
+   background: #4CAF50;
+   border-radius: 5px;
+   color: #ff9800;
+   }
+   
+   /* Sticky Effect */
+   nav.sticky {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+     font-family: 'Thasadith', sans-serif;
+   }
+   .navbar {
+     font-family: 'Thasadith', sans-serif;
+   }
+   
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -71,84 +105,54 @@ body {
    
 }
 
-.slider {
-    position: relative;
+.container {
+    width: 80%;
     max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    height: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
 }
-
-.slider {
-    display: none;
-    width: 100%;
-    height: 500px;
-}
-
-.active {
-    display: block;
-}
-
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.dots {
+h1 {
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
-
-.dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
-
-.active-dot {
-    background-color: #717171;
+.image-container img {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
- 
-        .container {
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #388e3c;
-            text-align: center;
-            font-family: 'Krub', sans-serif;
-        }
-        .image-container {
-            text-align: center;
-        }
-        .content {
-            margin-top: 20px;
-        
-        }
+.content p, .content ul {
+    line-height: 1.8;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.content ul li {
+    position: relative;
+    padding-left: 25px;
+}
+.content ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #f1c40f;
+    font-size: 1.2em;
+}
+.content strong {
+    color: #f39c12;
+}
         
 
 

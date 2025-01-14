@@ -8,50 +8,109 @@
 </head>
 <body>
     <div class="container">
-        <!-- องค์ประกอบที่ 1 -->
-        <div class="section">
-            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_2.pdf"><img src="" alt="">
-                <p>องค์ประกอบที่1</p>
-            </a>
-           
+        <div class="card">
+            <h2>องค์ประกอบที่ 1</h2>
+            <p>การจัดทำป้ายชื่อพรรณไม้
+            </p>
+            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_2.pdf"  class="card-link"target="_blank">เริ่ม</a>
         </div>
-
-        <!-- องค์ประกอบที่ 2 -->
-        <div class="section">
-           <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_3.pdf"> <img src="" alt="">
-            <p>องค์ประกอบที่2</p>
-        </a>
-           
+        <div class="card">
+            <h2>องค์ประกอบที่ 2</h2>
+            <p>การรวบรวมพรรณไม้เข้าปลูกในโรงเรียน</p>
+            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_3.pdf" class="card-link"target="_blank">เริ่ม</a>
         </div>
-
-        <!-- องค์ประกอบที่ 3 -->
-        <div class="section">
-            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_4.pdf">
-                <p>องค์ประกอบที่3</p>
-            </a>
-            
+        <div class="card">
+            <h2>องค์ประกอบที่ 3</h2>
+            <p> การศึกษาข้อมูลด้านต่าง ๆ
+            </p>
+            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_4.pdf" class="card-link"target="_blank">เริ่ม</a>
         </div>
-
-        <!-- องค์ประกอบที่ 4 -->
-        <div class="section">
-            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_5.pdf">
-                <p>องค์ประกอบที่ 4</p></a>
-            
+        <div class="card">
+            <h2>องค์ประกอบที่ 4</h2>
+            <p> การรายงานผลการเรียนรู้</p>
+            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_5.pdf" class="card-link"target="_blank">เริ่ม</a>
         </div>
-
-        <!-- องค์ประกอบที่ 5 -->
-        <div class="section">
-            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_6.pdf"> 
-                <p>องค์ประกอบที่5</p>
-
-            </a>
-            
-           
+        <div class="card">
+            <h2>องค์ประกอบที่ 5</h2>
+            <p>การนำไปใช้ประโยชน์ทางการศึกษา</p>
+            <a href="https://www.rspg.or.th/botanical_school/instruction_2560/pdf/7_006_6.pdf" class="card-link"target="_blank">เริ่ม</a>
         </div>
     </div>
+    </div>
     
-
-
+       
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+overflow-y: scroll; /* หรือ overflow: scroll; */
     
+    
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #f7f7f7;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-link:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    background-color: #fff;
+    color: #800080;
+}
+          
+                       
 </body>
 </html>

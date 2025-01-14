@@ -9,29 +9,35 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+
+}
+body {
+ line-height: 1.6;
+ background: linear-gradient(135deg, #9b59b6, #8e44ad);
+ color: #333;
+ font-family: 'Thasadith', sans-serif;
+ color: white;
+ line-height: 1.6;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ 
+ justify-content: center;
+ min-height: 100vh;
 }
 
-      body {
-          font-family: 'Thasadith', sans-serif;
-          line-height: 1.6;
-          background: #800080;
-          color: #333;
-      }
-
-      header {
-          background: #4CAF50;
-          color: #fff;
-          padding: 10px 0;
-          text-align: center;
-          
-      }
-
-      header img {
-          max-width: 100%;
-          height: auto;
-          width: 100%;
-      }
+header {
+ background: #4CAF50;
+ color: #fff;
+ padding: 10px 0;
+ text-align: center;
+}
+header img {
+   max-width: 100%;
+   height: auto;
+   width: 100%;
+}
 
       nav {
   width: 100%;
@@ -41,6 +47,7 @@ body, html {
   padding: 10px 0;
   transition: all 0.3s ease;
   z-index: 1000;
+  font-family: 'Thasadith', sans-serif;
 }
 
 nav ul {
@@ -65,10 +72,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-          background: #4CAF50;
-          border-radius: 5px;
-          color: #ff9800;
- }
+background: #4CAF50;
+border-radius: 5px;
+color: #ff9800;
+}
 
 /* Sticky Effect */
 nav.sticky {
@@ -78,6 +85,10 @@ nav.sticky {
   width: 100%;
   background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+  font-family: 'Thasadith', sans-serif;
+}
+.navbar {
+  font-family: 'Thasadith', sans-serif;
 }
 
 /* Sections */
@@ -174,8 +185,6 @@ nav.sticky {
 }
 .container1 h2 {
     text-decoration: none;
-    
-    
 }
 
 
@@ -249,18 +258,7 @@ ul li a:hover {
 
    
 
-body {
-    font-family: Arial, sans-serif;
-    
-    color: white;
-    line-height: 1.6;
-    margin: 20px;
-   
-    margin: 0;
-    padding: 0;
-    
-    
-}
+
 
 
   .header12 {
@@ -269,24 +267,41 @@ body {
   .header12 h1 {
     font-size: 24px;
   }
-  .banner {
-    margin: 20px auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* ระยะห่างระหว่างรูปภาพ */
-    max-width: 70%;
-    
-    
-  }
-  .banner img {
-    /* ขนาดรูปภาพแต่ละรูป (48% เพื่อให้เหลือระยะห่างระหว่างกัน) */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%; /* แต่ละรูปภาพกินพื้นที่ 50% */
-    max-width: px; /* จำกัดความกว้างสูงสุด */
-    display: block;
-  }
+  
+        /* แบนเนอร์ */
+        .banner {
+          display: flex;
+          flex-wrap: wrap; /* เพื่อให้รองรับหลายแถว */
+          justify-content: center;
+          align-items: center;
+          gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+          max-width: 90%;
+          margin: 20px auto;
+      }
+
+      .banner img {
+          width: 100%;
+          max-width: 300px; /* กำหนดความกว้างสูงสุดสำหรับรูปภาพ */
+          border-radius: 12px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อวางเมาส์ */
+      }
+
+      .banner img:hover {
+          transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อวางเมาส์ */
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .banner a {
+          text-decoration: none; /* ลบขีดเส้นใต้ลิงก์ */
+      }
+
+      /* การตอบสนองสำหรับอุปกรณ์มือถือ */
+      @media (max-width: 768px) {
+          .banner img {
+              max-width: 90%; /* รูปภาพจะขยายเต็มพื้นที่ที่เหมาะสม */
+          }
+      }
   .navigation {
     margin: 20px 0;
   }
@@ -307,7 +322,7 @@ body {
 }
  /* Marquee */
   .marquee {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
     font-size: 1.2rem;
@@ -324,7 +339,10 @@ body {
  /* Responsive Design */
  @media screen and (max-width: 768px) {
   nav ul {
-      flex-direction: column;
+      flex-direction: column; /* จัดเรียงในแนวตั้ง */
+      align-items: flex-start; /* จัดให้ชิดด้านซ้าย */
+      gap: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
+      padding: 0; /* ลบ padding ของ ul */
   }
 
   .slider {
