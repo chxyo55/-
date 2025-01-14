@@ -83,19 +83,60 @@ border-radius: 5px;
 color: #ff9800;
 }
 
-  /* Sticky Effect */
-  nav.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
-    font-family: 'Thasadith', sans-serif;
-  }
+ /* Sticky Effect */
+ nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
   .navbar {
     font-family: 'Thasadith', sans-serif;
   }
+
+    /* ปุ่มเมนูสำหรับมือถือ */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+    
+      top: 15px;
+      right: 20px;
+    }
+
+    /* เมนูในมือถือ */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      width: 100%;
+      
+      padding: 10px 0;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Media Query สำหรับมือถือ */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
 
 /* Sections */
 .section {
@@ -343,18 +384,7 @@ ul li a:hover {
  /* Marquee */
 
  /* Responsive Design */
- @media screen and (max-width: 768px) {
-  nav ul {
-      flex-direction: column; /* จัดเรียงในแนวตั้ง */
-      align-items: flex-start; /* จัดให้ชิดด้านซ้าย */
-      gap: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
-      padding: 0; /* ลบ padding ของ ul */
-  }
 
-  .slider {
-      height: auto;
-  }
-}
 
 /* การปรับรูปแบบของ container ให้เหมาะสมกับมือถือ */
 /* สำหรับหน้าจอที่มีความกว้างไม่เกิน 768px */
