@@ -15,20 +15,7 @@
         <img src="img/ปกเว็บ.png" alt="ปกเว็บ">
     </header>
  <!-- Navigation Bar -->
- <nav>
-  <!-- ปุ่มเปิด-ปิดเมนู -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <!-- เมนูสำหรับมือถือ -->
-  <ul class="mobile-menu" id="mobile-menu">
-    <li><a href="index.html">หน้าแรก</a></li>
-    <li><a href="khomp.html">ความเป็นมา</a></li>
-    <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
-    <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html" target="_blank">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
-    <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
-  </ul>
-
-  <!-- เมนูปกติ (เดสก์ท็อป) -->
+ <nav id="navbar">
   <ul>
     <li><a href="index.html">หน้าแรก</a></li>
     <li><a href="khomp.html">ความเป็นมา</a></li>
@@ -105,12 +92,7 @@ window.onscroll = () => {
   }
 };
 
-  // ฟังก์ชันเปิด-ปิดเมนูมือถือ
-  function toggleMenu() {
-      const menu = document.getElementById("mobile-menu");
-      menu.classList.toggle("active");
-    }
-
+ 
 
 
 

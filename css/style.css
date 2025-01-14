@@ -97,44 +97,21 @@ color: #ff9800;
     font-family: 'Thasadith', sans-serif;
   }
 
-    /* ปุ่มเมนูสำหรับมือถือ */
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-      font-size: 30px;
-      color: white;
-    
-      top: 15px;
-      right: 20px;
-    }
-
-    /* เมนูในมือถือ */
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background-color: #333;
-      width: 100%;
-      
-      padding: 10px 0;
-    }
-
-    .mobile-menu.active {
-      display: flex;
-    }
-
-    .mobile-menu li {
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    /* Media Query สำหรับมือถือ */
+   
+  /* สำหรับหน้าจอมือถือ */
     @media (max-width: 768px) {
-      nav ul {
-        display: none;
+      nav {
+        position: relative; /* เมนูจะไม่เลื่อนตาม */
+        box-shadow: none; /* ลบเงา */
       }
 
-      .menu-toggle {
-        display: block;
+      nav.sticky {
+        position: relative; /* เมนูจะไม่ใช้ sticky ในมือถือ */
+      }
+
+      nav ul {
+        flex-direction: column; /* จัดการเมนูในแนวตั้ง */
+        align-items: center;
       }
     }
 
