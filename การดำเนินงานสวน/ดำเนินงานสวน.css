@@ -1,9 +1,4 @@
-@media (max-width: 768px) {
-    .column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -12,11 +7,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
-overflow-y: scroll; /* หรือ overflow: scroll; */
-    
-    
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container {
@@ -25,17 +18,20 @@ overflow-y: scroll; /* หรือ overflow: scroll; */
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
+    flex: 1 1 calc(33.333% - 30px);
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
-    margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -74,4 +70,26 @@ overflow-y: scroll; /* หรือ overflow: scroll; */
 .card-link:hover {
     background-color: #fff;
     color: #800080;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+    .card h2 {
+        font-size: 1.2em;
+    }
+    .card p {
+        font-size: 0.9em;
+    }
+    .card-link {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
 }

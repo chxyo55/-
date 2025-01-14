@@ -5,12 +5,8 @@
 
 
 }
-@media (max-width: 768px) {
-    .column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -154,6 +150,41 @@ h1 {
     color: #f39c12;
 }
         
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดให้ชิดด้านซ้าย */
+        gap: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
+        padding: 0; /* ลบ padding ของ ul */
+        width: 100%; /* จำกัดขนาด */
+        box-sizing: border-box;
+    }
 
+    .slider {
+        height: auto;
+        max-width: 100%; /* จำกัดให้พอดีหน้าจอ */
+        overflow: hidden; /* ซ่อนส่วนเกินออกจากขอบ */
+    }
+}
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .content p, .content ul {
+        font-size: 0.9em;
+    }
+    .container {
+        padding: 15px;
+    }
+}
 
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .content p, .content ul {
+        font-size: 0.8em;
+    }
+}

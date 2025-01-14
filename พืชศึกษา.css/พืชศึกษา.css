@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 
 }
 
@@ -10,6 +8,7 @@
 body, html {
     margin: 0;
     padding: 0;
+   
   
   }
   body {
@@ -55,6 +54,7 @@ header {
      display: flex;
      justify-content: center;
      gap: 20px;
+     
    }
    
    nav ul li {
@@ -100,6 +100,20 @@ h1 {
 
 
 
+    .container, .card {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card {
+        margin: 10px auto; /* ปรับระยะห่างให้ไม่เกินหน้าจอ */
+    }
+
+    img {
+        display: block; /* ป้องกันปัญหาช่องว่างที่อาจทำให้หน้าจอสั่น */
+        max-width: 100%; /* ป้องกันการยืดขนาดภาพ */
+        height: auto;
+    }
 
 .card {
     background: rgba(255, 255, 255, 0.15);
@@ -149,3 +163,62 @@ h1 {
     background: #9b59b6;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   }
+
+  @media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดให้ชิดด้านซ้าย */
+        gap: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
+        padding: 0; /* ลบ padding ของ ul */
+        width: 100%; /* จำกัดขนาด */
+        box-sizing: border-box;
+    }
+
+    .slider {
+        height: auto;
+        max-width: 100%; /* จำกัดให้พอดีหน้าจอ */
+        overflow: hidden; /* ซ่อนส่วนเกินออกจากขอบ */
+    }
+}
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+          .container {
+              padding: 15px;
+          }
+
+          .card {
+              padding: 15px;
+              max-width: 90%;
+          }
+
+          .card h1 {
+              font-size: 20px;
+          }
+
+          .card p {
+              font-size: 14px;
+          }
+
+          .card a {
+              padding: 8px 15px;
+              font-size: 14px;
+          }
+      }
+
+      @media screen and (max-width: 480px) {
+          .card h1 {
+              font-size: 18px;
+          }
+
+          .card p {
+              font-size: 12px;
+          }
+
+          .card a {
+              padding: 6px 10px;
+              font-size: 12px;
+          }
+      }
+   
