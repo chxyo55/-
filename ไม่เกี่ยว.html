@@ -1,120 +1,43 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>กกลังกา - สมุนไพรไทย</title>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="ไม่เกี่ยว.css">
-  <style>
-    body {
-    font-family: 'Kanit', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-    color: #333;
-  }
-  
-  header {
-    text-align: center;
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-    color: #8e44ad;
-  }
-  
-  header p {
-    font-size: 1.2em;
-    color: #555;
-  }
-  
-  main {
-    padding: 0 20px;
-  }
-  
-  section {
-    margin-bottom: 40px;
-  }
-  
-  h2 {
-    font-size: 2em;
-    color: #8e44ad;
-    border-bottom: 2px solid #8e44ad;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-  
-  p, ul {
-    font-size: 1.1em;
-    line-height: 1.6;
-  }
-  
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .gallery .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .gallery .image-grid img {
-    width: calc(33.333% - 10px);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    margin-top: 30px;
-  }
-  
-  footer p {
-    margin: 0;
-    color: #555;
-  }
-  
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สวนพฤกษศาสตร์โรงเรียน</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>กกลังกา (Cyperus alternifolius)</h1>
-    
-  </header>
-  <main>
-    <section class="introduction">
-      <h2>เกี่ยวกับกกลังกา</h2>
-      <p>กกลังกาเป็นพืชล้มลุกที่พบได้ทั่วไปในประเทศไทย มีลักษณะเด่นคือใบเรียวยาวและดอกสีเหลือง...</p>
-    </section>
-    <section class="benefits">
-      <h2>สรรพคุณของกกลังกา</h2>
-      <ul>
-        <li>ช่วยบรรเทาอาการปวดเมื่อย</li>
-        <li>มีฤทธิ์ต้านการอักเสบ</li>
-        <li>ช่วยลดความดันโลหิต</li>
-        <!-- เพิ่มเติมสรรพคุณตามต้องการ -->
-      </ul>
-    </section>
-    <section class="gallery">
-      <h2>ภาพของกกลังกา</h2>
-      <div class="image-grid">
-        <img src="image1.jpg" alt="กกลังกา">
-        <img src="image2.jpg" alt="กกลังกา">
-        <img src="image3.jpg" alt="กกลังกา">
-        <!-- เพิ่มเติมภาพตามต้องการ -->
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 ข้อมูลสมุนไพรไทย</p>
-  </footer>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>สวนพฤกษศาสตร์</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+                <li><a href="#services">บริการ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content of the page goes here -->
+
+    <script src="script.js">
+      // JavaScript to toggle the menu on mobile
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+    </script>
 </body>
 </html>

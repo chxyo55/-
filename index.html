@@ -17,7 +17,9 @@
 
    <!-- Navigation Bar -->
    <nav id="navbar">
-     <ul>
+    <!-- ปุ่มเมนู -->
+    
+    <ul>
         <li><a href ="index.html">หน้าแรก</a></li>
         <li><a href="khomp.html">ความเป็นมา</a></li>
         <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
@@ -25,6 +27,7 @@
         <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
      </ul>
     </nav>
+    
 
     <script src="script.js"></script>
 <div class="marquee">
@@ -81,17 +84,11 @@
     }, 5000);
 
 
-     // ดึง Navigation Bar
-const navbar = document.getElementById('navbar');
+     
 
-// ฟังก์ชันตรวจสอบตำแหน่งการเลื่อน
-window.onscroll = () => {
-    if (window.scrollY > 50) { // หากเลื่อนเกิน 50px
-        navbar.classList.add('sticky'); // เพิ่มคลาส sticky
-    } else {
-        navbar.classList.remove('sticky'); // เอาคลาส sticky ออก
-    }
-};
+
+
+
 </script>
 <!-- สไลด์รูป -->
 <div class="gallery1">

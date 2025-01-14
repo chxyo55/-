@@ -76,16 +76,7 @@ header {
    font-family: 'Thasadith', sans-serif;
    }
    
-   /* Sticky Effect */
-   nav.sticky {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
-     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
-   
-   }
+
  
 .container {
     padding: 20px;

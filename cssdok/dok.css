@@ -87,3 +87,21 @@ header {
      font-family: 'Thasadith', sans-serif;
    }
   
+
+   @media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดให้ชิดด้านซ้าย */
+        gap: 10px; /* เพิ่มระยะห่างระหว่างรายการ */
+        padding: 0; /* ลบ padding ของ ul */
+        width: 100%; /* จำกัดขนาด */
+        box-sizing: border-box;
+    }
+
+    .slider {
+        height: auto;
+        max-width: 100%; /* จำกัดให้พอดีหน้าจอ */
+        overflow: hidden; /* ซ่อนส่วนเกินออกจากขอบ */
+    }
+}
