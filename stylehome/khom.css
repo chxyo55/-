@@ -36,7 +36,7 @@ header {
     text-align: center;
    }
    header img {
-      max-width: 100%;
+      
       height: auto;
       width: 100%;
    }
@@ -188,3 +188,26 @@ h1 {
         font-size: 0.8em;
     }
 }
+h3 {
+    font-size: 26px; /* ขนาดตัวอักษรที่ใหญ่ขึ้น */
+    font-weight: 700; /* ตัวหนา */
+    color: white; /* สีข้อความขาวเพื่อให้ตัดกับพื้นหลัง */
+    margin-top: 30px; /* เพิ่มระยะห่างด้านบน */
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ข้อความ */
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff; /* เส้นขาวด้านล่าง */
+}
+
+p {
+    font-size: 16px; /* ขนาดพอเหมาะอ่านง่าย */
+    line-height: 1.6; /* ปรับระยะห่างบรรทัดให้พอดี */
+    color: #f2f2f2; /* สีขาวอ่อนเพื่อให้อ่านง่าย */
+    text-align: justify; /* จัดข้อความให้อยู่ตรงตามขอบ */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px; /* เพิ่มระยะห่างระหว่างตัวอักษรเล็กน้อย */
+    font-weight: 400; /* ปรับน้ำหนักตัวอักษรให้ไม่หนาเกินไป */
+}
+

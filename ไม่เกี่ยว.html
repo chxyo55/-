@@ -4,40 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สวนพฤกษศาสตร์โรงเรียน</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>สวนพฤกษศาสตร์</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">หน้าแรก</a></li>
-                <li><a href="#about">เกี่ยวกับเรา</a></li>
-                <li><a href="#services">บริการ</a></li>
-                <li><a href="#contact">ติดต่อ</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
+        <img src="img/ปกเว็บ.png" alt="ปกเว็บ">
+        <h1>ยินดีต้อนรับสู่สวนพฤกษศาสตร์โรงเรียน</h1>
     </header>
 
-    <!-- Content of the page goes here -->
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="khomp.html">ความเป็นมา</a></li>
+            <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
+            <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
+            <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
+        </ul>
+    </nav>
 
-    <script src="script.js">
-      // JavaScript to toggle the menu on mobile
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+    <!-- Main Content -->
+    <div class="container">
+        <section>
+            <h2>ความเป็นมาของสวนพฤกษศาสตร์โรงเรียน</h2>
+            <img src="img/khompen.jpg" alt="แผนภาพสวนพฤกษศาสตร์" width="100%">
+            <p><strong>สวนพฤกษศาสตร์</strong> คือแหล่งรวบรวมพันธุ์พืชชนิดต่าง ๆ ...</p>
+            <p><strong>สวนพฤกษศาสตร์โรงเรียน</strong> คือ...</p>
+        </section>
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+        <section>
+            <h2>วัตถุประสงค์ของการดำเนินงาน</h2>
+            <ul>
+                <li>สร้างจิตสำนึกในการอนุรักษ์พันธุกรรมพืช</li>
+                <li>มีข้อมูลการเรียนรู้ที่เผยแพร่ได้</li>
+                <li>ส่งเสริมคุณธรรมและการเรียนรู้</li>
+            </ul>
+        </section>
 
+        <section>
+            <h2>ประโยชน์ที่ได้รับ</h2>
+            <p>การดำเนินงานสวนพฤกษศาสตร์โรงเรียนช่วยให้...</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>ติดต่อเรา: โรงเรียนสวนพฤกษศาสตร์ | โทร: 02-123-4567 | อีเมล: info@schoolbotanic.com</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        };
     </script>
 </body>
 </html>
