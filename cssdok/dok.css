@@ -124,3 +124,13 @@ iframe {
   border: none;
   border-radius: 10px;
 }
+/* ปรับความสูง iframe ให้เหมาะสมบนมือถือ */
+.ratio-16x9 {
+  height: 500px; /* ค่าพื้นฐานสำหรับหน้าจอปกติ */
+}
+
+@media (max-width: 768px) {
+  .ratio-16x9 {
+      height: 800px; /* เพิ่มความสูงบนมือถือ */
+  }
+}
