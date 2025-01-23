@@ -4,107 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>กกลังกา - สมุนไพรไทย</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-/* สไตล์ทั่วไป */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  background-color: #333;
-  padding: 10px;
-}
-
-/* สไตล์เมนู */
-.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.menu li {
-  margin: 0 10px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-/* สไตล์ปุ่มเมนู */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 30px;
-  color: white;
-}
-
-/* สไตล์สำหรับหน้าจอมือถือ */
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: #333;
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(135deg, #8e44ad, #9b59b6);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    section {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    header h1 {
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #000;
   }
-
-  .menu li {
-    margin: 0;
-    text-align: center;
-  }
-
-  .menu li a {
-    display: block;
-    padding: 15px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu.active {
-    display: block;
-  }
-}
-
-
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    img {
+      border-radius: 10px;
+    }
+    .btn-primary {
+      background-color: #ffcc00;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #e6b800;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-      <!-- ปุ่มเมนู -->
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span>☰</span> <!-- ไอคอนเมนู -->
-      </div>
-      <ul id="mobile-menu" class="menu">
-          <li><a href ="index.html">หน้าแรก</a></li>
-          <li><a href="khomp.html">ความเป็นมา</a></li>
-          <li><a href="พืชศึกษา.html">พืชศึกษา</a></li>
-          <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html"target="_blank">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
-          <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
-       </ul>
-      </nav>
+  <header class="container">
+    <h1>กกลังกา (Cyperus alternifolius)</h1>
+    <p>สมุนไพรพื้นบ้านทรงคุณค่า</p>
   </header>
 
-  <script src="script.js"></script>
+  <main class="container">
+    <section class="row align-items-center">
+      <div class="col-md-6">
+        <img src="img/กกลังกา8.jpg" alt="กกลังกา" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <p><strong>ชื่อสมุนไพร:</strong> กกลังกา</p>
+        <p><strong>ชื่ออื่นๆ:</strong> กกขนาก, กกต้นกลม, หญ้าลังกา</p>
+        <p><strong>ชื่อสามัญ:</strong> Umbell plant, Flatsedge</p>
+        <p><strong>ชื่อวิทยาศาสตร์:</strong> Cyperus alternifolius L.</p>
+        <p><strong>ชื่อวงศ์:</strong> CYPERACEAE</p>
+      </div>
+    </section>
 
+    <section>
+      <h2>ลักษณะทั่วไป</h2>
+      <p>กกลังกา หรือที่รู้จักกันในชื่อวิทยาศาสตร์ว่า <strong>Cyperus alternifolius</strong> เป็นพืชล้มลุกที่พบได้ทั่วไปในประเทศไทย มีลักษณะเด่นคือใบเรียวยาวสีเขียวสดชื่น และดอกที่มีลักษณะเฉพาะตัว มักถูกนำมาใช้ในทางสมุนไพรและการประดับตกแต่งสวน</p>
+    </section>
 
-  <script>
-    function toggleMenu() {
-  // ค้นหาเมนูที่มี id เป็น "mobile-menu"
-  const menu = document.getElementById("mobile-menu");
-  
-  // เพิ่มหรือลบคลาส "active" เพื่อแสดงหรือซ่อนเมนู
-  menu.classList.toggle("active");
-}
+    <section>
+      <h2>วิธีการปลูกและการดูแล</h2>
+      <ul>
+        <li><strong>ดินที่เหมาะสม:</strong> ดินร่วนหรือดินที่มีการระบายน้ำดี เช่น ดินผสมทราย</li>
+        <li><strong>แสงแดดและน้ำ:</strong> ต้องการแสงแดดครึ่งวันถึงเต็มวัน และควรรดน้ำสม่ำเสมอ</li>
+        <li><strong>การดูแลรักษา:</strong> ใส่ปุ๋ยคอกหรือปุ๋ยอินทรีย์ทุก 2-3 เดือน และตัดแต่งใบแห้งออกเพื่อกระตุ้นการเติบโต</li>
+      </ul>
+    </section>
 
-  </script>
+    <section>
+      <h2>ประโยชน์ของกกลังกา</h2>
+      <h3>ทางสมุนไพร</h3>
+      <p>ช่วยลดการอักเสบ บรรเทาอาการปวดเมื่อย และช่วยลดความดันโลหิต</p>
+      <h3>ด้านการตกแต่งสวน</h3>
+      <p>เหมาะสำหรับจัดสวนในสไตล์โมเดิร์นหรือทรอปิคอล โดยสามารถปลูกในกระถางหรือริมสระน้ำได้</p>
+      <h3>การอนุรักษ์สิ่งแวดล้อม</h3>
+      <p>กกลังกามีความสามารถดูดซับน้ำส่วนเกิน และช่วยปรับปรุงคุณภาพดิน</p>
+    </section>
+
+    <section>
+      <h2>ภาพของกกลังกา</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/กกลังกา4.jpg" alt="กกลังกา" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="img/กกลังกา5.jpg" alt="กกลังกา" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="img/กกลังกา6.jpg" alt="กกลังกา" class="img-fluid">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
