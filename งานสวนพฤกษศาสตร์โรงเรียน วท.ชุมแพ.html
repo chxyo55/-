@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 20px;
+            color: #ffee00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .gallery-item {
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        button {
+            background-color: #ffee00;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 20px 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <h1>งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ</h1>
+    <div class="gallery-container2" id="gallery"></div>
+    <div>
+        <button id="prev-btn">ก่อนหน้า</button>
+        <button id="next-btn">ถัดไป</button>
+    </div>
+
+    <script>
+        const galleryContainer = document.getElementById("gallery");
+        const imagePath = "img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ ("; // เส้นทางไฟล์รูปภาพ
+
+        let currentBatch = 1; // แสดง batch ของรูป
+        const batchSize = 12; // จำนวนรูปต่อครั้ง
+        const totalImages = 52; // จำนวนรูปทั้งหมด
+
+        function loadImages(start, end) {
+            galleryContainer.innerHTML = ""; // ลบรูปเก่า
+            for (let i = start; i <= end; i++) {
+                const galleryItem = document.createElement("div");
+                galleryItem.className = "gallery-item";
+                const img = document.createElement("img");
+                img.src = `${imagePath}${i}).jpg`;
+                img.alt = `Image ${i}`;
+                galleryItem.appendChild(img);
+                galleryContainer.appendChild(galleryItem);
+            }
+        }
+
+        function updateBatch() {
+            const start = (currentBatch - 1) * batchSize + 1;
+            const end = Math.min(currentBatch * batchSize, totalImages);
+            loadImages(start, end);
+        }
+
+        document.getElementById("prev-btn").addEventListener("click", () => {
+            if (currentBatch > 1) {
+                currentBatch--;
+                updateBatch();
+            }
+        });
+
+        document.getElementById("next-btn").addEventListener("click", () => {
+            if (currentBatch * batchSize < totalImages) {
+                currentBatch++;
+                updateBatch();
+            }
+        });
+
+        // Load the first batch of images
+        updateBatch();
+    </script>
+</body>
+</html>

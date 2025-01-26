@@ -10,53 +10,71 @@
     <link rel="icon" type="image/png" href="img/โลโก้วิลัย.png">
     
     
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="img/ปกเว็บ.png" alt="ปกเว็บ">
+        <img src="img/ปกหัวเว็บ.jpg" alt="ปกเว็บ">
     </header>
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
       <a class="navbar-brand" href="index.html">งานสวนพฤกษศาสตร์</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto"> <!-- ใช้ 'ms-auto' เพื่อจัดตำแหน่งให้เนวิเกชั่นอยู่ขวาในหน้าจอขนาดใหญ่ -->
+          <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
               <li class="nav-item"><a class="nav-link" href="khomp.html">ความเป็นมา</a></li>
+              <li class="nav-item"><a class="nav-link" href="พระราชดำริและแรงบันดาลใจ.html">พระราชดำริและแรงบันดาลใจ</a></li>
+              <li class="nav-item"><a class="nav-link" href="ผลที่ได้รับจากการดำเนินงาน.html">ผลที่ได้รับจากการดำเนินงาน</a></li>
+              <li class="nav-item"><a class="nav-link" href="ผลงานเด่นและสาธิต.html">ผลงานเด่นและสาธิต</a></li>
               <li class="nav-item"><a class="nav-link" href="พืชศึกษา.html">พืชศึกษา</a></li>
-              <li class="nav-item"><a class="nav-link" href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html" >งานสวนพฤกษศาสตร์โรงเรียน</a></li>
+              <li class="nav-item"><a class="nav-link" href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html">งานสวนพฤกษศาสตร์โรงเรียน</a></li>
               <li class="nav-item"><a class="nav-link" href="dok.html">ทะเบียนพรรณไม้</a></li>
           </ul>
       </div>
   </div>
 </nav>
+
     <script src="script.js"></script>
 <div class="marquee">
     <div class="marquee-text">ยินดีต้อนรับเข้าสู่งานสวนพฤกษศาสตร์โรงเรียนวิทยาลัยเทคนิคชุมแพ</div>
 </div>
 
-
 <div class="slider">
-    <img class="slides active" src="img/สไลด์.jpg" alt="Image 1">
-    <img class="slides active" src="img/สไลด์1.jpg" alt="Image 2">
-    <img class="slides active" src="img/สไลด์2.jpg" alt="Image 3">
-  
-    <button class="nav-button prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
-  </div>
-  
-  <div class="dots">
-    <span class="dot active-dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+  <img class="slides active" src="img/งานสวน (14).jpg" alt="Image 1">
+  <img class="slides" src="img/งานสวน (16).jpg" alt="Image 2">
+  <img class="slides" src="img/งานสวน (18).jpg" alt="Image 3">
+  <img class="slides" src="img/งานสวน (1).jpg" alt="Image 4">
+  <img class="slides" src="img/งานสวน (2).jpg" alt="Image 5">
+  <img class="slides" src="img/งานสวน (3).jpg" alt="Image 6">
+  <img class="slides" src="img/งานสวน (4).jpg" alt="Image 7">
+  <img class="slides" src="img/งานสวน (5).jpg" alt="Image 8">
+  <img class="slides" src="img/งานสวน (6).jpg" alt="Image 9">
+  <img class="slides" src="img/งานสวน (7).jpg" alt="Image 10">
+
+  <button class="nav-button prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<div class="dots">
+  <span class="dot active-dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
   
   <script>
-    let slideIndex = 1;
+   slideIndex = 1; // ตั้งค่าใหม่ให้ slideIndex เป็น 1
     showSlides(slideIndex);
   
     function changeSlide(n) {
@@ -102,6 +120,18 @@ window.onscroll = () => {
   }
 };
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryBtn = document.getElementById('gallery-link-btn');
+  
+  galleryBtn.addEventListener('mouseenter', () => {
+    galleryBtn.style.transform = 'scale(1.05)';
+  });
+  
+  galleryBtn.addEventListener('mouseleave', () => {
+    galleryBtn.style.transform = 'scale(1)';
+  });
+});
  
 
 
@@ -114,6 +144,192 @@ window.onscroll = () => {
         <img src="img/แจ่มจันทร์_ผังสรุปงานสวน-1.png" width="50%">
       </center>
 </div>
+<div class="container content-container">
+  <div class="row align-items-center">
+      <!-- Carousel ตัวแรก -->
+      <div class="col-md-6 col-12 mb-3 mb-md-0">
+          <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="img/งานสวน (1).jpg" class="d-block w-100" alt="รูปที่ 1">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (2).jpg" class="d-block w-100" alt="รูปที่ 2">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (14).jpg" class="d-block w-100" alt="รูปที่ 3">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (16).jpg" class="d-block w-100" alt="รูปที่ 4">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (21).jpg" class="d-block w-100" alt="รูปที่ 5">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (7).jpg" class="d-block w-100" alt="รูปที่ 6">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/งานสวน (5).jpg" class="d-block w-100" alt="รูปที่ 7">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          
+      </div>
+
+      <!-- ส่วนข้อความ -->
+      <div class="col-md-6 col-12 text-container">
+          <h2>การประชุมวิชาการและนิทรรศการสวนพฤกษศาสตร์โรงเรียนและฐานทรัพยากรท้องถิ่นระดับภูมิภาค 
+          </h2>
+          <p>
+            วันที่ 4 ธันวาคม พ.ศ. 2567 นายพรชัย จุฑามาศ
+            รองผู้อำนวยการโครงการอนุรักษ์
+            พันธุกรรมพืชอันเนื่องมาจากพระราชดำริฯ และ
+            หัวหน้าสำนักงานโครงการฯ เยี่ยมชมนิทรรศการ วท.ชุมแพ การประชุมวิชาการและนิทรรศการสวนพฤกษศาสตร์โรงเรียนและฐานทรัพยากรท้องถิ่นระดับภูมิภาค ครั้งที่  8 ปี พ.ศ. 2567 ณ ศูนย์อนุรักษ์พันธุกรรมพืชอันเนื่องมาจากพระราชดำริฯ อพ.สธ. คลองไผ่ มหาวิทยาลัยเทคโนโลยีสุรนารี อำเภอสีคิ้ว จังหวัดนครราชสีมา
+          </p>
+          <!-- Button Container -->
+            <div class="text-center mt-3">
+                <a href="การประชุมวิชาการและนิทรรศการสวนพฤกษศาสตร์.html" 
+                    id="gallery-link-btn"
+                    class="btn-gallery-link">ดูรูปเพิ่มเติม
+                </a>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="container content-container">
+  <div class="row align-items-center">
+      <!-- Carousel ตัวที่สอง -->
+      <div class="col-md-6 col-12 mb-3 mb-md-0">
+          <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="img/แมลงป่าไม้ (1).jpg" class="d-block w-100" alt="รูปที่ 1">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (2).jpg" class="d-block w-100" alt="รูปที่ 2">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (3).jpg" class="d-block w-100" alt="รูปที่ 3">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (4).jpg" class="d-block w-100" alt="รูปที่ 4">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (5).jpg" class="d-block w-100" alt="รูปที่ 5">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (6).jpg" class="d-block w-100" alt="รูปที่ 6">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/แมลงป่าไม้ (7).jpg" class="d-block w-100" alt="รูปที่ 7">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+      <!-- ส่วนข้อความ -->
+      <div class="col-md-6 col-12 text-container">
+         
+          <p>คณะคุณครูและนักศึกษาวิทยาลัยเทคนิคชุมแพ อ.ชุมแพ จ.ขอบแก่น  จำนวน 43 คน เข้าศึกษาแมลงป่าไม้</p>
+            <!-- Button Container -->
+            <div class="text-center mt-3">
+                <a href="แมลงป่าไม้.html" 
+                    id="gallery-link-btn"
+                    class="btn-gallery-link">ดูรูปเพิ่มเติม
+                </a>
+            </div>
+      </div>
+  </div>
+</div>  
+
+<div class="custom-slider-container">
+    <div class="custom-slider">
+        <div class="custom-slides">
+            <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (20).jpg" class="active" alt="Image 1">
+            <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (35).jpg" alt="Image 2">
+            <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (31).jpg" alt="Image 3">
+            <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (2).jpg" alt="Image 4">
+            <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (22).jpg" alt="Image 5">
+        </div>
+        <div class="custom-buttons">
+            <button class="custom-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="custom-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <div class="custom-text-container">
+        <h2>งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ</h2>
+        <p>
+            งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ สนองงานโครงการอนุรักษ์พันธุกรรมพืชอันเนื่องมาจากพระราชดำริ สมเด็จพระเทพรัตนราชสุดาฯ สยามบรมราชกุมารี (อพ.สธ.)ในกิจกรรมที่ 7 วันที่ 19-20 กันยายน 2567 นายบรรลือศักดิ์  มานาดี ผู้อำนวยการวิทยาลัยทคนิคชุมแพ เป็นประธานเปิด โครงการอบรมเชิงปฏิบัติการ 5 องค์ประกอบ 3 สาระการเรียนรู้ (ธรรมชาติแห่งชีวิต สรรพสิ่งล้วนพันเกี่ยว ประโยชน์แท้แก่มหาชน) ให้กับคณะครูในวิทยาลัยจำนวน 80 คน จาก 10 สาขาวิชา เพื่อให้เข้าใจการดำเนินงานสามารถนำ 5 องค์ประกอบ 3 สาระการเรียนรู้ ไปบูรณาการในการจัดการเรียนการสอน เขียนแผนการจัดการเรียนรู้ ออกแบบใบงาน สร้างนวัตกรรม สิ่งประดิษฐ์ งานวิจัยที่บูรณาการงานสวนพฤกษศาสตร์โรงเรียนได้อย่างถูกต้อง  วิทยากรในการอบรม มี 3 คน
+        </p>
+        <ul>
+            <li>นางสุพร ไชยยศ ครูเชี่ยวชาญ ข้าราชการบำนาญ</li>
+            <li>นางสาวกรเกศ สิงห์โสภา รองผู้อำนวยการ วก.วิเชียรบุรี</li>
+            <li>นางแจ่มจันทร์ หอมระหัส ครูชำนาญการ วท.ชุมแพ</li>
+        </ul>
+        <a href="งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ.html"><button class="btn-more">ดูรูปเพิ่มเติม</button></a>
+    </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+const images = document.querySelectorAll('.custom-slides img');
+
+function showSlide(index) {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+}
+
+function prevSlide() {
+    slideIndex = (slideIndex > 0) ? slideIndex - 1 : images.length - 1;
+    showSlide(slideIndex);
+}
+
+function nextSlide() {
+    slideIndex = (slideIndex < images.length - 1) ? slideIndex + 1 : 0;
+    showSlide(slideIndex);
+}
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
+  
 
 <!-- ภาพกิจกรรม -->
 <h1>ภาพกิจกรรม</h1>
@@ -130,8 +346,24 @@ window.onscroll = () => {
       <img src="img/Kanjanapisek001.jpg" alt="">
       <p>อบรมแนวทางการดำเนินงาน งานสวนพฤกษศาสตร์โรงเรียน วิทยาลัยกาญจนาภิเษกหนองจอก กทม.</p>
   </a>
- 
+  <a href="การประชุมวิชาการและนิทรรศการสวนพฤกษศาสตร์.html" class="card">
+    <img src="img/งานสวน (1).jpg" alt="">
+    <p>การประชุมวิชาการและนิทรรศการสวนพฤกษศาสตร์โรงเรียนและฐานทรัพยากรท้องถิ่นระดับภูมิภาค.</p>
+</a>
+<a href="แมลงป่าไม้.html" class="card">
+    <img src="img/แมลงป่าไม้ (1).jpg" alt="">
+    <p>คณะคุณครูและนักศึกษาวิทยาลัยเทคนิคชุมแพ อ.ชุมแพ จ.ขอบแก่น   เข้าศึกษาแมลงป่าไม้</p>
+</a>
+<a href="วิทยากรเสวนาแลกเปลี่ยนเรียนรู้.html" class="card">
+    <img src="img/วิทยากรเสวนาแลกเปลี่ยนเรียนรู้  (14).jpg" alt="">
+    <p>คณะคุณครูและนักศึกษาวิทยาลัยเทคนิคชุมแพ อ.ชุมแพ จ.ขอบแก่น   เข้าศึกษาแมลงป่าไม้</p>
+</a>
+<a href="งานสวนพฤกษศาสตร์โรงเรียน วท.ชุมแพ.html" class="card">
+    <img src="img/โครงการอบรมเชิงปฏิบัติการ 5 องค์ (19).jpg" alt="">
+    <p>งานสวนพฤกษศาสตร์โรงเรียนวิทยาลัยเทคนิคชุมแพ</p>
+</a>
 </div>
+
 <!-- ภาพกิจกรรม -->
 <h1>คู่มือสวนพฤกษศาสตร์ ฉบับเต็ม</h1>
 <div class="container90">
@@ -186,16 +418,20 @@ window.onscroll = () => {
             <li><a href="khomp.html">ข้อมูลงานสวนพฤกษศาสตร์</a></li>
             <li><a href="dok.html">ทะเบียนพรรณไม้</a></li>
             <li><a href="การดำเนินงานสวนพฤกษศาสตร์โรงเรียน.html">5 องค์ประกอบของสวนพฤกษศาสตร์</a></li>
+            <li><a href="สมาชิก.html">สมาชิกสวนพฤกษศาสตร์โรงเรียน</a></li>
+            
+            
         </ul>
     </div>
 </div>
+
 <div class="header12">
     <h1>&lt;&lt;&lt; ลิงค์เว็บไซต์ที่สำคัญ &gt;&gt;&gt;</h1>
   </div>
   <div class="banner">
     <!-- ใส่ URL รูปภาพและลิงก์ -->
     <a href="https://rspg.or.th/index_sub.html" target="_blank">
-        <img src="img/รูป.png" alt="รูปภาพ 1">
+        <img src="img/สำคัญ.png" alt="รูปภาพ 1">
     </a>
     <a href="https://www.rspg.or.th/botanical_school/neo_sbg/index.html" target="_blank">
         <img src="img/อพ.สธ.png" alt="รูปภาพ 2">
@@ -208,6 +444,44 @@ window.onscroll = () => {
     <p>271 หมู่ 14 ตำบลหนองไผ่ อำเภอชุมแพ จังหวัดขอนแก่น 40130</p>
 </footer>
 
+<div class="container mt-5">
+  <!-- หัวข้อกิจกรรม -->
+  <h2 class="text-center mb-4">กิจกรรมพิเศษ</h2>
+  
+  <!-- Section แกลเลอรี่ -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="img/กิจกรรม1.jpg" class="card-img-top" alt="กิจกรรม 1">
+        <div class="card-body">
+          <h5 class="card-title">กิจกรรม 1</h5>
+          <p class="card-text">รายละเอียดกิจกรรมนี้...</p>
+          <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="img/กิจกรรม2.jpg" class="card-img-top" alt="กิจกรรม 2">
+        <div class="card-body">
+          <h5 class="card-title">กิจกรรม 2</h5>
+          <p class="card-text">รายละเอียดกิจกรรมนี้...</p>
+          <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="img/กิจกรรม3.jpg" class="card-img-top" alt="กิจกรรม 3">
+        <div class="card-body">
+          <h5 class="card-title">กิจกรรม 3</h5>
+          <p class="card-text">รายละเอียดกิจกรรมนี้...</p>
+          <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

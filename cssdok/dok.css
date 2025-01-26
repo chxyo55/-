@@ -93,6 +93,10 @@ header {
     font-size: 18px;
     padding: 12px 20px;
 }
+.nav-link {
+  color: white;
+}
+
 /* สำหรับหน้าจอมือถือ */
 @media (max-width: 768px) {
   nav {

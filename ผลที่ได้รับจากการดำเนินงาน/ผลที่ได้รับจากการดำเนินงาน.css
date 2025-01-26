@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+
+nav {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    position: relative;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Thasadith', sans-serif;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+  background: #4CAF50;
+  border-radius: 5px;
+  color: #ff9800;
+  }
+  /* Sticky Effect */
+  nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444; /* เปลี่ยนสีเมื่อ sticky */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+  .navbar {
+   font-family: 'Thasadith', sans-serif;
+   } 
+   .navbar-nav .nav-link {
+      font-size: 18px;
+      padding: 12px 20px;
+  }
+  .nav-link {
+    color: white;
+  }
+  
+   /* สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+  nav {
+    position: relative; /* เมนูจะไม่เลื่อนตาม */
+    box-shadow: none; /* ลบเงา */
+  }
+
+  nav.sticky {
+    position: relative; /* เมนูจะไม่ใช้ sticky ในมือถือ */
+  }
+
+  nav ul {
+    flex-direction: column; /* จัดการเมนูในแนวตั้ง */
+    align-items: center;
+  }
+}
+     

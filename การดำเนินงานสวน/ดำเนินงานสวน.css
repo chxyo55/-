@@ -67,6 +67,11 @@ nav.sticky {
   font-size: 18px;
   padding: 12px 20px;
 }
+.nav-link {
+  color: white;
+}
+
+
 
   .navbar {
    font-family: 'Thasadith', sans-serif;

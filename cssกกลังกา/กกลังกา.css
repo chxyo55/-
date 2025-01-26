@@ -98,6 +98,7 @@ body {
     
 }
 
+
   
   @media (max-width: 768px) {
     header {
@@ -143,3 +144,11 @@ body {
       font-size: 0.9em;
     }
   }
+
+
+
+    .text1 p {
+      line-height: 1;
+      padding-left: 40px;
+  }
+    

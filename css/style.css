@@ -6,24 +6,19 @@
 
 
 
-body, html {
-  margin: 0;
-  padding: 0;
 
-}
 body {
  line-height: 1.6;
  background: linear-gradient(135deg, #9b59b6, #8e44ad);
- color: #333;
+ 
  font-family: 'Thasadith', sans-serif;
  color: white;
  line-height: 1.6;
  margin: 0;
  padding: 0;
- display: flex;
+;
  flex-direction: column;
- 
- justify-content: center;
+
  min-height: 100vh;
 }
 
@@ -100,6 +95,9 @@ color: #ff9800;
     font-size: 18px;
     padding: 12px 20px;
 }
+.nav-link {
+  color: white;
+}
 
    
   /* สำหรับหน้าจอมือถือ */
@@ -132,20 +130,20 @@ color: #ff9800;
 /* java */
 .slider {
   position: relative;
-  max-width: 1000px;
+  max-width: 1000px; /* ความกว้างของสไลด์ */
   margin: auto;
   overflow: hidden;
   border: 2px solid #ccc;
   border-radius: 10px;
-  height: 500px;
-  background-color: #000;
+  height: 500px; /* ความสูงของสไลด์ */
+  background-color: #000; /* สีพื้นหลัง */
 }
 
 .slides {
   display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* ให้ครอบคลุมความกว้างของกรอบ */
+  height: 100%; /* ให้ครอบคลุมความสูงของกรอบ */
+  object-fit: cover; /* ครอบภาพตามขนาดกรอบ โดยไม่ให้บิดเบี้ยว */
 }
 
 .slides.active {
@@ -395,5 +393,242 @@ ul li a:hover {
   .column {
     width: 32%; /* ทำให้คอลัมน์มีความกว้าง 32% */
     margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างระหว่างคอลัมน์ */
+  }
+}
+
+.text-container {
+  background-color: #9b59b6;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+a {
+  color: #ffccff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* General container styles */
+.container.content-container {
+  padding: 60px 15px;
+  margin-top: 30px;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease;
+}
+
+.carousel-indicators button {
+  background-color: #000; /* Indicator color */
+}
+
+.carousel-indicators .active {
+  background-color: #f1c40f;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000; /* Navigation arrows color */
+}
+
+/* Carousel image styling */
+.carousel img {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text container */
+.text-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  line-height: 1.8;
+}
+
+.text-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-container p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .carousel {
+    margin-bottom: 20px;
+  }
+
+  .text-container h2 {
+    font-size: 24px;
+  }
+
+  .text-container p {
+    font-size: 14px;
+  }
+}
+/*  */
+
+
+/* เก็บไว้ยังไม่ได้ใช้  */
+.btn-gallery-link {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gallery-link:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+/*  */
+
+
+
+
+.custom-slider-container {
+  display: flex;
+  flex-direction: row; /* ยังคงการจัดแนวนอนของ slider กับ text */
+  justify-content: center; /* จัดกึ่งกลางแนวนอน */
+  align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+  width: 100%;  /* เปลี่ยนเป็น 100% เพื่อให้คอนเทนเนอร์กว้างเต็มที่ */
+  max-width: 1200px;  /* หรือค่าที่เหมาะสมกับดีไซน์ของคุณ */
+  margin: auto; /* จัดให้ container อยู่ตรงกลาง */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Gradient */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Slider Section */
+.custom-slider {
+  position: relative;
+  width: 65%;
+  overflow: hidden;
+}
+
+.custom-slides img {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  border-radius: 10px;
+}
+
+.custom-slides img.active {
+  display: block;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Buttons */
+.custom-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.custom-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-buttons button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Text Container */
+.custom-text-container {
+  width: 35%;
+  padding: 20px;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Gradient */
+  color: white;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom-text-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  animation: slide-in 1.5s ease;
+}
+
+.custom-text-container p,
+.custom-text-container ul {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn-more {
+  padding: 10px 20px;
+  border: none;
+  background: #ff9800;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-more:hover {
+  background: #e67e22;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
   }
 }
