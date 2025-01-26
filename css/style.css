@@ -488,23 +488,6 @@ a:hover {
 /*  */
 
 
-/* เก็บไว้ยังไม่ได้ใช้  */
-.btn-gallery-link {
-  display: inline-block;
-  background-color: #3b82f6;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-gallery-link:hover {
-  background-color: #2563eb;
-  transform: scale(1.05);
-}
-/*  */
 
 
 
