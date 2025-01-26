@@ -258,21 +258,37 @@ h1 {
 h1 {
     text-align: center;
     color: yellow;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 .container90 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+    gap: 20px;
 }
 .column {
-    width: 18%;
+  width: 30%;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+h3 {
+  color: #006400;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 ul {
     list-style-type: square;
 }
 ul li {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 ul li a {
     color: lightblue;
@@ -280,6 +296,7 @@ ul li a {
 }
 ul li a:hover {
     text-decoration: underline;
+   
 }
 
    
