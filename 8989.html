@@ -1,126 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider with Text</title>
+    <title>การบูรณาการผลงานจากพืชในพื้นที่ศึกษา - รร.บ้านวังหว้า</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .custom-slider-container {
-            display: flex;
-            width: 80%;
-            max-width: 1000px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            background: linear-gradient(135deg, #9b59b6, #8e44ad); /* เปลี่ยนเป็น gradient */
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .custom-slider {
-            position: relative;
-            width: 70%;
-            overflow: hidden;
-        }
-        .custom-slides img {
-            width: 100%;
-            height: auto;
-            display: none;
-            object-fit: cover;
-        }
-        .custom-slides img.active {
-            display: block;
-        }
-        .custom-text-container {
-            width: 30%;
-            padding: 20px;
-            background: linear-gradient(135deg, #9b59b6, #8e44ad); /* เปลี่ยนเป็น gradient */
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .custom-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .custom-buttons button {
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .custom-text-container button {
-            margin-top: 20px;
-            padding: 10px;
-            border: none;
-            background: #ff9800;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Specific Styles */
+#สวนพฤกษศาสตร์ {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+#Eco-Printing {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
     </style>
+
 </head>
 <body>
-    <div class="custom-slider-container">
-        <div class="custom-slider">
-            <div class="custom-slides">
-                <img src="img/469304581_8970013416370937_1743782684473305980_n.jpg" class="active" alt="Image 1">
-                <img src="img/Kanjanapisek001.jpg" alt="Image 2">
-                <img src="img/Kanjanapisek2.jpg" alt="Image 3">
-                <img src="img/Kanjanapisek4.jpg" alt="Image 4">
-                <img src="img/Pungtuipattanasuksa School11.jpg" alt="Image 5">
+    <main>
+        <section id="สวนพฤกษศาสตร์">
+            <div class="container">
+                <h2>การบูรณาการผลงานจากพืชในพื้นที่ศึกษา</h2>
+                <p>ปฏิบัติหน้าที่วิทยากร การบูรณาการผลงานจากพืชในพื้นที่ศึกษา งานสวนพฤกษศาสตร์โรงเรียน eco printing ผ้าพิมพ์ลายใบไม้ ณ รร.บ้านวังหว้า อ.บ้านแฮด จ.ขอนแก่น ขอบพระคุณท่านสุภาวดี ระโยธี ปฏิรูปที่ดินจังหวัดขอนแก่น</p>
+                <div class="gallery">
+                    <img src="img/การบูรณา (1).jpg" alt="สวนพฤกษศาสตร์ 1">
+                    <img src="img/การบูรณา (5).jpg" alt="สวนพฤกษศาสตร์ 2">
+                    <img src="img/การบูรณา (6).jpg" alt="สวนพฤกษศาสตร์ 3">
+                    <img src="img/การบูรณา 10.jpg" alt="สวนพฤกษศาสตร์ 4">
+                    
+                    
+                </div>
             </div>
-            <div class="custom-buttons">
-                <button onclick="prevSlide()">&#10094;</button>
-                <button onclick="nextSlide()">&#10095;</button>
+        </section>
+
+        <section id="Eco-Printing">
+            <div class="container">
+                <h2>Eco Printing ผ้าพิมพ์ลายใบไม้</h2>
+                <p>การทำ Eco Printing หรือการพิมพ์ลายใบไม้บนผ้า ที่ส่งเสริมการอนุรักษ์สิ่งแวดล้อม...</p>
+                <div class="gallery">
+                    <img src="img/การบูรณา (2).jpg" alt="Eco Printing 1">
+                    <img src="img/การบูรณา (3).jpg" alt="Eco Printing 2">
+                    <img src="img/การบูรณา (4).jpg" alt="Eco Printing 3">
+                    <img src="img/การบูรณา (9).jpg" alt="Eco Printing 4">
+                 
+                </div>
             </div>
-        </div>
-        <div class="custom-text-container">
-            <h2>Image Description</h2>
-            <p id="custom-description">This is the description for image 1.</p>
-            <a href="#"><button>ดูรูปเพิ่มเติม</button></a>
-        </div>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-        const images = document.querySelectorAll('.custom-slides img');
-        const descriptions = [
-            'This is the description for image 1.',
-            'This is the description for image 2.',
-            'This is the description for image 3.',
-            'This is the description for image 4.',
-            'This is the description for image 5.'
-        ];
-
-        function showSlide(index) {
-            images.forEach(img => img.classList.remove('active'));
-            images[index].classList.add('active');
-            document.getElementById('custom-description').innerText = descriptions[index];
-        }
-
-        function prevSlide() {
-            slideIndex = (slideIndex > 0) ? slideIndex - 1 : images.length - 1;
-            showSlide(slideIndex);
-        }
-
-        function nextSlide() {
-            slideIndex = (slideIndex < images.length - 1) ? slideIndex + 1 : 0;
-            showSlide(slideIndex);
-        }
-    </script>
+        </section>
+    </main>
 </body>
 </html>
