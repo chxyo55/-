@@ -526,22 +526,22 @@ a:hover {
 
 .custom-slider-container {
   display: flex;
-  flex-direction: row; /* ยังคงการจัดแนวนอนของ slider กับ text */
-  justify-content: center; /* จัดกึ่งกลางแนวนอน */
-  align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-  width: 100%;  /* เปลี่ยนเป็น 100% เพื่อให้คอนเทนเนอร์กว้างเต็มที่ */
-  max-width: 1200px;  /* หรือค่าที่เหมาะสมกับดีไซน์ของคุณ */
-  margin: auto; /* จัดให้ container อยู่ตรงกลาง */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Gradient */
+  flex-wrap: wrap; /* ให้เลย์เอาต์ปรับตัวตามหน้าจอเล็ก */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
   border-radius: 10px;
   overflow: hidden;
 }
 
-/* Slider Section */
 .custom-slider {
   position: relative;
-  width: 65%;
+  width: 100%; /* เต็มความกว้างหน้าจอ */
+  max-width: 65%; /* จำกัดความกว้างเมื่ออยู่ในหน้าจอใหญ่ */
   overflow: hidden;
 }
 
@@ -559,7 +559,6 @@ a:hover {
   opacity: 1;
 }
 
-/* Buttons */
 .custom-buttons {
   position: absolute;
   top: 50%;
@@ -585,11 +584,11 @@ a:hover {
   color: black;
 }
 
-/* Text Container */
 .custom-text-container {
-  width: 35%;
+  width: 100%; /* ตั้งให้เต็มเมื่ออยู่บนมือถือ */
+  max-width: 35%; /* จำกัดความกว้างสำหรับหน้าจอใหญ่ */
   padding: 20px;
-  background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Gradient */
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
   color: white;
   border-radius: 0 20px 20px 0;
   display: flex;
@@ -600,7 +599,6 @@ a:hover {
 .custom-text-container h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  animation: slide-in 1.5s ease;
 }
 
 .custom-text-container p,
@@ -625,28 +623,38 @@ a:hover {
   background: #e67e22;
 }
 
-/* Animations */
-@keyframes fade-in {
-  from {
-      opacity: 0;
-      transform: scale(0.9);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-slider-container {
+    flex-direction: column; /* ซ้อนกันแนวตั้ง */
   }
-  to {
-      opacity: 1;
-      transform: scale(1);
+
+  .custom-slider {
+    width: 100%; /* Slider เต็มความกว้าง */
+    max-width: 100%; /* ยกเลิก max-width */
+  }
+
+  .custom-text-container {
+    width: 100%; /* Text Container เต็มความกว้าง */
+    max-width: 100%; /* ยกเลิก max-width */
+    border-radius: 0; /* ลบมุมโค้ง */
+  }
+
+  .custom-buttons button {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  .custom-text-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .custom-text-container p,
+  .custom-text-container ul {
+    font-size: 0.9rem;
   }
 }
 
-@keyframes slide-in {
-  from {
-      transform: translateX(-50px);
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
  /* Footer Styles */
  footer {
   background-color: #333;
