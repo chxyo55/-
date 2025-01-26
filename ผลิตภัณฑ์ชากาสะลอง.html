@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ผลิตภัณฑ์ชากาสะลอง</title>
-    <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
         }
         .container {
-            width: 100%;
             max-width: 1200px;
-            text-align: center;
             background: linear-gradient(135deg, #ffe8e8, #ffe2f5);
-            padding: 60px 20px;
+            padding: 30px 15px;
             border-radius: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
+        }
+        .product {
+            border: 2px solid #ffc3d1;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
         h1 {
             font-size: 3.5rem;
             color: #d66382;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            margin-top: 50px; /* ขยับลงมาจากด้านบน */
             margin-bottom: 30px;
             position: relative;
             z-index: 2;
@@ -40,113 +41,52 @@
             padding: 10px;
             width: 100%;
             text-align: center;
-        }
-        .product {
-            position: relative;
-            border: 2px solid #ffc3d1;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            background: #ffffff;
-            transition: transform 0.3s;
-        }
-        .product:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        .product img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .sparkle {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            background: url('https://i.gifer.com/7VEA.gif');
-            background-size: cover;
-            opacity: 0.6;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        /* Media Query สำหรับอุปกรณ์มือถือ */
-        @media (max-width: 576px) {
-            h1 {
-                font-size: 2.2rem; /* ลดขนาดตัวอักษรในมือถือ */
-                margin-top: 30px; /* ขยับข้อความขึ้นเล็กน้อย */
-            }
-            .product img {
-                height: 200px; /* ปรับขนาดภาพให้เล็กลง */
-            }
-        }
-
-        /* Media Query สำหรับอุปกรณ์แท็บเล็ตและจอใหญ่ */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem; /* ปรับขนาดข้อความบนแท็บเล็ต */
-            }
+            visibility: visible;
         }
     </style>
 </head>
 <body>
-    <br>
-    <br>
-    <div class="container">
-        <h1>ผลิตภัณฑ์ชากาสะลอง<br>สิ่งประดิษฐ์คนรุ่นใหม่</h1>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">ผลิตภัณฑ์ชากาสะลอง</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- รูปที่ 1-7 -->
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (4).jpg" alt="Product 1">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (6).jpg" alt="Product 2">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (3).jpg" alt="Product 3">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (5).jpg" alt="Product 4">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (1).jpg" alt="Product 5">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (2).jpg" alt="Product 6">
-                    <div class="sparkle"></div>
                 </div>
             </div>
             <div class="col">
                 <div class="product">
                     <img src="img/ผลิตภัณฑ์ชากาสะลอง  (7).jpg" alt="Product 7">
-                    <div class="sparkle"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Add Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
