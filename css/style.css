@@ -465,6 +465,43 @@ a:hover {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
+   /* ปุ่มหลัก */
+   .btn-gallery-link {
+    background-color: #ffee00; /* สีพื้นหลังเป็นสีเหลือง */
+    color: #333; /* สีข้อความเป็นสีเข้ม */
+    text-decoration: none; /* ลบเส้นใต้ของลิงค์ */
+    padding: 12px 30px; /* เพิ่มระยะห่างรอบ ๆ ปุ่ม */
+    font-size: 1.1rem; /* ขนาดฟอนต์ */
+    border-radius: 30px; /* มุมปุ่มโค้งมน */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่ราบรื่น */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงารอบ ๆ ปุ่ม */
+}
+
+/* เอฟเฟกต์เมื่อเมาส์เลื่อนมาบนปุ่ม */
+.btn-gallery-link:hover {
+    background-color: #ffcc00; /* สีพื้นหลังเมื่อ hover */
+    color: #fff; /* เปลี่ยนข้อความเป็นสีขาวเมื่อ hover */
+    transform: translateY(-5px); /* เลื่อนปุ่มขึ้นเล็กน้อย */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+/* เอฟเฟกต์เมื่อคลิกปุ่ม */
+.btn-gallery-link:active {
+    transform: translateY(0); /* ลดการเลื่อนเมื่อคลิก */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเมื่อคลิก */
+}
+
+/* สไตล์สำหรับเมื่ออยู่ใน container */
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ระยะห่างด้านบน */
+.mt-3 {
+    margin-top: 20px;
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
