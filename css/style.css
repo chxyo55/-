@@ -340,12 +340,7 @@ ul li a:hover {
   .navigation a:hover {
     text-decoration: underline;
   }
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
+ 
  /* Marquee */
   .marquee {
     color: #ffffff;
@@ -613,5 +608,91 @@ a:hover {
   to {
       transform: translateX(0);
       opacity: 1;
+  }
+}
+ /* Footer Styles */
+ footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+footer .text1 {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+footer p i {
+  margin-right: 8px;
+}
+
+footer p i.fas, footer p i.fab {
+  font-size: 1.3rem;
+}
+
+footer .text1 p:first-child {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+footer .text1 p a {
+  color: #ffee00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .text1 p a:hover {
+  color: #ffcc00;
+}
+
+footer .arrow-icons {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #ffee00;
+  transition: transform 0.3s;
+}
+
+footer .arrow-icons:hover {
+  transform: translateY(-5px);
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+
+footer .social-icons i {
+  margin: 0 15px;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+footer .social-icons i:hover {
+  color: #ffee00;
+}
+
+footer .footer-bottom {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer p {
+      font-size: 1rem;
+  }
+
+  footer .social-icons i {
+      font-size: 1.5rem;
   }
 }
