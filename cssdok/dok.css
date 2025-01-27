@@ -144,3 +144,17 @@ iframe {
       height: 800px; /* เพิ่มความสูงบนมือถือ */
   }
 }
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 2.5rem;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
