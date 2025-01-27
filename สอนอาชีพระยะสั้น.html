@@ -9,20 +9,22 @@
             background: linear-gradient(135deg, #9b59b6, #8e44ad);
             font-family: 'Sarabun', sans-serif;
             color: #fff;
-            padding: 30px;
+            padding: 20px;
             line-height: 1.6;
-            overflow: auto; /* Enable scrolling */
-            height: 100vh; /* Adjust height */
+            overflow: auto;
+            height: 100vh;
+            margin: 0;
         }
 
         .container {
             margin: 20px auto;
             text-align: justify;
-            max-width: 1200px; /* Limit the width of the content */
+            max-width: 100%; /* Allow container to stretch across available space */
+            padding: 10px;
         }
 
         .section-title {
-            font-size: 24px;
+            font-size: 1.5em;
             margin-top: 20px;
             text-decoration: underline;
             text-align: center;
@@ -37,25 +39,25 @@
         }
 
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic grid */
+    gap: 15px;
+    margin-top: 20px;
+}
 
-        .image-gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
+.image-gallery img {
+    width: 100%;
+    height: 250px; /* กำหนดความสูงที่เท่ากัน */
+    object-fit: cover; /* ให้รูปภาพไม่ผิดสัดส่วน */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
 
-        .image-gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
 
         .pagination {
             text-align: center;
@@ -76,13 +78,25 @@
         .pagination button:disabled {
             background-color: #7f8c8d;
         }
+
+        @media (max-width: 600px) {
+            .section-title {
+                font-size: 1.2em;
+            }
+
+            .pagination button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>สอนอาชีพระยะสั้น วิชาการพิมพ์ผ้าลายใบไม้ Eco printing</h1>
-      <p>สอนอาชีพระยะสั้น วิชาการพิมพ์ผ้าลายใบไม้ Eco printing เป็นรายวิชาทีู่บูรณาการงานสวนพฤกษศาสตร์โรงเรียน  การสร้างประโยชน์แท้แก่มหาชน สร้างงานสร้างอาชีพ ให้กับโรงเรียนเทศบาล 1</p>
+        <p>สอนอาชีพระยะสั้น วิชาการพิมพ์ผ้าลายใบไม้ Eco printing เป็นรายวิชาทีู่บูรณาการงานสวนพฤกษศาสตร์โรงเรียน  การสร้างประโยชน์แท้แก่มหาชน สร้างงานสร้างอาชีพ ให้กับโรงเรียนเทศบาล 1</p>
+        
         <div class="section-title">ภาพกิจกรรม</div>
 
         <div class="image-gallery" id="image-gallery">
@@ -128,7 +142,7 @@
     </div>
 
     <script>
-        const imagesPerPage = 8; // กำหนดจำนวนรูปที่จะแสดงในแต่ละหน้า
+        const imagesPerPage = 8;
         let currentPage = 1;
         const images = document.querySelectorAll('.image-gallery img');
         
@@ -153,7 +167,6 @@
             showPage(currentPage);
         }
 
-        // แสดงหน้าปัจจุบัน
         showPage(currentPage);
     </script>
 
