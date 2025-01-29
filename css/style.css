@@ -365,7 +365,7 @@ ul li a:hover {
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    animation: marquee 10s linear infinite;
+    animation: marquee 50s linear infinite;
 }
 
 @keyframes marquee {

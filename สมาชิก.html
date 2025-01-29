@@ -5,11 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมาชิกสวนพฤกษศาสตร์โรงเรียน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="สมาชิก/สมาชิก.css">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+            font-family: 'Sarabun', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+            width: 100%;
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #fff;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #8e44ad;
+        }
+
+        .card h4 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .large-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .large-card img {
+            display: block;
+            margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            border: 3px solid #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center;">ผู้บริหารและบุคลากร</h1>
+    <header>
+        <h1>ผู้บริหารและบุคลากร</h1>
+    </header>
+
     <div class="container">
         <!-- แถวที่ 1 -->
         <div class="row">
@@ -35,8 +140,8 @@
                 <h4>หัวหน้าแผนกวิชาเทคโนโลยีสารสนเทศ</h4>
             </div>
         </div>
-        <!-- แถวที่ 4 (2 คนในแถวเดียวกัน) -->
-        <div class="row two">
+        <!-- แถวที่ 4 -->
+        <div class="row">
             <div class="card">
                 <img src="img/ครูชมพู.jpg" alt="นางชมพูนุช มานาดี">
                 <h3>นางชมพูนุช มานาดี</h3>
@@ -48,16 +153,19 @@
                 <h4>เจ้าหน้าที่พัสดุ</h4>
             </div>
         </div>
-        <h1 style="text-align: center;">สมาชิกสวนพฤกษศาสตร์</h1>
-       <!-- แถวสุดท้าย (รูปเดี่ยวขนาดใหญ่ตรงกลาง) -->
-       <div class="row">
-        <div class="large-card">
-            <img src="img/รวม.jpg" alt="รูปเพิ่มเติม">
-            
+
+        <h1>สมาชิกสวนพฤกษศาสตร์</h1>
+
+        <!-- แถวสุดท้าย -->
+        <div class="row">
+            <div class="large-card">
+                <img src="img/รวม.jpg" alt="รูปเพิ่มเติม">
+            </div>
         </div>
     </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <p>วิทยาลัยเทคนิคชุมแพ &copy; 2025</p>
+    </footer>
 </body>
 </html>
